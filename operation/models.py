@@ -33,3 +33,12 @@ class CourseComments(models.Model):
     class Meta:
         verbose_name = '评论'
         verbose_name_plural = verbose_name
+
+class UserCourse(models.Model):
+    user = models.ForeignKey(UserProfile, verbose_name='用户', on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, verbose_name='课程', on_delete=models.CASCADE)
+    add_time = models.DateTimeField('添加时间', default=datetime.now)
+
+    class Meta:
+        verbose_name = '用户课程'
+        verbose_name_plural = verbose_name
