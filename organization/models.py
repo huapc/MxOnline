@@ -15,3 +15,12 @@ class CourseOrg(models.Model):
     class Meta:
         verbose_name = '课程机构'
         verbose_name_plural = verbose_name
+
+class CityDict(models.Model):
+    name = models.CharField('城市',max_length=20)
+    desc = models.CharField('描述',max_length=200)
+    add_time = models.DateTimeField(default=datetime.now)
+
+    class Meta:
+        verbose_name = '城市'
+        verbose_name_plural= verbose_name
