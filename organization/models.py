@@ -23,7 +23,7 @@ class CityDict(models.Model):
 
     class Meta:
         verbose_name = '城市'
-        verbose_name_plural= verbose_name
+        verbose_name_plural = verbose_name
         
 class Teacher(models.Model):
     org = models.ForeignKey(CourseOrg,verbose_name='所属机构',on_delete=models.CASCADE)
